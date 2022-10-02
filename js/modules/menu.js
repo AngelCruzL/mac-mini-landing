@@ -1,6 +1,6 @@
-const $menuButton = document.getElementById('menu-button');
-const $mainHeader = document.getElementById('main-header');
-const $overlay = document.getElementById('main-overlay');
+const $buttonMenu = document.getElementById('buttonMenu');
+const $mainHeader = document.getElementById('mainHeader');
+const $overlay = document.getElementById('mainOverlay');
 const activeClass = 'is-active';
 const isTablet = matchMedia('(max-width : 734px)');
 
@@ -17,14 +17,14 @@ const closeMenuTypeScape = e => {
 };
 
 const handleAddEventListener = () => {
-  $menuButton.addEventListener('click', toggleMenu);
+  $buttonMenu.addEventListener('click', toggleMenu);
   $overlay.addEventListener('click', closeMenu);
   $mainHeader.addEventListener('click', closeMenuClickLink);
   $mainHeader.addEventListener('keydown', closeMenuTypeScape);
 };
 
 const handleRemoveEventListener = () => {
-  $menuButton.removeEventListener('click', toggleMenu);
+  $buttonMenu.removeEventListener('click', toggleMenu);
   $overlay.removeEventListener('click', closeMenu);
   $mainHeader.removeEventListener('click', closeMenuClickLink);
   $mainHeader.removeEventListener('keydown', closeMenuTypeScape);
