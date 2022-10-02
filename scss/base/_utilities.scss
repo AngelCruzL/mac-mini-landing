@@ -6,12 +6,12 @@
 
 .container {
   margin-inline: auto;
-  width: min(87.5%, calc(17.5px + 4rem));
+  inline-size: min(87.5%, calc(17.5px + 4rem));
 }
 
 @media screen and (min-width: 734px) {
   .container {
-    width: min(100%, 43.25rem);
+    inline-size: min(100%, 43.25rem);
   }
 }
 
