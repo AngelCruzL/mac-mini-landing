@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: local('SF Pro Text'), url(/fonts/SFProText-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: local('SF Pro Display'),
+    url(/fonts/SFProDisplay-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-display: auto;
+  src: local('SF Pro Display'),
+    url(/fonts/SFProDisplay-Medium.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: auto;
+  src: local('SF Pro Display'),
+    url(/fonts/SFProDisplay-Semibold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+  src: local('SF Pro Display'),
+    url(/fonts/SFProDisplay-Bold.woff2) format('woff2');
+}
+
+:root {
+  --fontBody: 'SF Pro Text', sans-serif;
+  --fontDisplay: 'SF Pro Display', sans-serif;
+
+  /*Body font size*/
+  --sizeBodySmaller: 0.75rem; /*12px*/
+  --sizeBodyBig: 1.25rem; /*20px*/
+  --sizeBodyBigger: 1.5rem; /*24px*/
+
+  /*Title font size*/
+  --sizeTitleSmall: 2rem; /*32px*/
+  --sizeTitleNormal: 2.5rem; /*40px*/
+  --sizeTitleBig: 2.5rem; /*40px*/
+  --sizeTitleBigger: 2.5rem; /*40px*/
+
+  /*Weight*/
+  --fontWeightNormal: 400;
+  --fontWeightMedium: 500;
+  --fontWeightSemiBold: 600;
+  --fontWeightBold: 700;
+
+  /*Line height*/
+  --lineHeightTitle: 1.15;
+}
+
+@media screen and (min-width: 734px) {
+  :root {
+    /*Body font size*/
+    --sizeBodyBig: 1.5rem; /*24px*/
+    --sizeBodyBigger: 1.75rem; /*28px*/
+
+    /*Tittle font size*/
+    --sizeTitleSmall: 2.5rem; /*40px*/
+    --sizeTitleBigger: 4rem; /*64px*/
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    /*Body font size*/
+    --sizeBodySmaller: 1rem; /*16px*/
+    --sizeBodyNormal: 1.25rem; /*20px*/
+    --sizeBodyBig: 1.75rem; /*28px*/
+    --sizeBodyBigger: 1rem; /*32px*/
+
+    /*Tittle font size*/
+    --sizeTitleSmall: 3rem; /*48px*/
+    --sizeTitleNormal: 3.5rem; /*56px*/
+    --sizeTitleBig: 4rem; /*64px*/
+    --sizeTitleBigger: 5rem; /*80px*/
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontDisplay);
+  font-weight: var(--fontWeightSemiBold);
+}
+
+.display-font {
+  font-family: var(--fontDisplay);
+}
+
+.body-font {
+  font-family: var(--fontBody);
+}
