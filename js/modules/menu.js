@@ -8,6 +8,8 @@ const toggleMenu = () => $mainHeader.classList.toggle(activeClass);
 
 const closeMenu = () => $mainHeader.classList.remove(activeClass);
 
+document.onscroll = closeMenu;
+
 const closeMenuClickLink = e => {
   if (e.target.tagName === 'A') closeMenu();
 };
