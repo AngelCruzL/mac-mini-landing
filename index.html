@@ -6,31 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mac Mini M1 | Landing Page</title>
     
-    <script type="module" crossorigin src="./assets/index.93ca3b00.js"></script>
-    <link rel="stylesheet" href="./assets/index.cd042284.css">
+    <script type="module" crossorigin src="./assets/index.049085be.js"></script>
+    <link rel="stylesheet" href="./assets/index.e307f42d.css">
   </head>
+
   <body>
-    <header id="main-header" class="main-header place-center">
+    <header id="mainHeader" class="mainHeader place-center">
       <nav class="nav container">
         <a href="#" class="tittle"> Mac mini</a>
         <div class="right place-center">
-          <ul id="main-menu" class="main-menu">
+          <ul id="mainMenu" class="mainMenu">
             <li class="item">
-              <a href="#" class="link">Descripcion</a>
+              <a href="#overview" class="link">Overview</a>
             </li>
             <li class="item">
-              <a href="#" class="link">Por que la Mac</a>
+              <a href="#why-mac" class="link">Why Mac</a>
             </li>
             <li class="item">
-              <a href="#" class="link">Especificaciones</a>
+              <a href="#specifications" class="link">Tech Specs</a>
             </li>
           </ul>
-          <button id="menu-button" class="menu-button"></button>
+          <button id="buttonMenu" class="buttonMenu"></button>
 
-          <a href="#" class="button tiny">Comprar</a>
+          <a href="#" class="button tiny">Buy</a>
         </div>
       </nav>
     </header>
-    <div class="main-overlay" id="main-overlay"></div>
+
+    <div class="mainOverlay" id="mainOverlay"></div>
+
+    <main class="main hidden">
+      <section id="overview" class="heroBanner">
+        <div class="heroImage center-x">
+          <picture>
+            <source
+              media="(max-width:734px)"
+              srcset="./media/img/hero-image-small.jpg"
+            />
+            <source
+              media="(max-width:1024px)"
+              srcset="./media/img/hero-image.jpg"
+            />
+            <source
+              media="(min-width:0px)"
+              srcset="./media/img/hero-image-large.jpg"
+            />
+            <img
+              class="picture center-x"
+              src="./media/img/hero-image-dark-large.jpg"
+              alt="Portada de la Pagina Mac"
+              loading="lazy"
+              lazyalt="Portada de la Pagina Mac"
+            />
+          </picture>
+
+          <picture>
+            <source
+              media="(max-width:734px)"
+              srcset="./media/img/hero-image-dark-small.jpg"
+            />
+            <source
+              media="(max-width:1024px)"
+              srcset="./media/img/hero-image-dark.jpg"
+            />
+            <source
+              media="(min-width:0px)"
+              srcset="./media/img/hero-image-dark-large.jpg"
+            />
+            <img
+              class="picture center-x dark"
+              src="./media/img/hero-image-dark-large.jpg"
+              alt="Portada de la Pagina Mac"
+              loading="lazy"
+              lazyalt="Portada de la Pagina Mac"
+            />
+          </picture>
+        </div>
+
+        <div class="container">
+          <h1 class="productTittle">Mac mini</h1>
+          <h2 class="heroTittle">New guts.<span>More glory.</span></h2>
+          <p class="description">
+            The Apple M1 chip takes our most versatile, do-it-all desktop into
+            another dimension. With up to 3x faster CPU performance. Up to 6x
+            faster graphics. An advanced Neural Engine for up to 15x faster
+            machine learning. Get ready to work, play, and create on Mac mini
+            with speed and power beyond anything you ever imagined.
+          </p>
+          <div class="subtitle place-center">
+            <picture>
+              <source
+                media="(max-width:734px)"
+                srcset="./media/img/chip-m1-small.jpg"
+              />
+              <source
+                media="(max-width:1024px)"
+                srcset="./media/img/chip-m1.jpg"
+              />
+              <img
+                class="chip"
+                src="./media/img/chip-m1.jpg"
+                alt="Chip M1"
+                loading="lazy"
+                lazyalt="Chip M1"
+              />
+            </picture>
+
+            <p>Supercharged by the Apple M1 chip</p>
+          </div>
+
+          <div class="heroCta-container place-center">
+            <a class="heroCta">From $699</a>
+            <a class="heroCta arrow" href="">Watch the event</a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
