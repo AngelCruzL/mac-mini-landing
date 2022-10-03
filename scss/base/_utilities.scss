@@ -6,17 +6,24 @@
 
 .container {
   margin-inline: auto;
-  inline-size: min(87.5%, calc(17.5px + 4rem));
-}
+  inline-size: 88%;
 
-@media screen and (min-width: 734px) {
-  .container {
+  @media screen and (min-width: 734px) {
     inline-size: min(100%, 43.25rem);
   }
+
+  @media screen and (min-width: 1024px) {
+    max-inline-size: 61.25rem;
+  }
 }
 
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 61.25rem;
-  }
+.hidden {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.center-x {
+  left: 50%;
+  transform: translateX(-50%);
 }

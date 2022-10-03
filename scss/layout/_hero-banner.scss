@@ -1,0 +1,162 @@
+.heroImage {
+  position: relative;
+  block-size: 27rem;
+  inline-size: 46rem;
+
+  @media screen and (min-width: 734px) {
+    inline-size: 66rem;
+    block-size: 39rem;
+  }
+
+  @media screen and (min-width: 10244px) {
+    inline-size: 84rem;
+    block-size: 50rem;
+  }
+
+  .picture {
+    position: absolute;
+    block-size: 100%;
+    inline-size: 100%;
+    object-fit: cover;
+  }
+
+  .picture.dark {
+    animation: turnOn-heroImage 1s ease-in-out 0.1s forwards;
+  }
+}
+
+.heroBanner {
+  text-align: center;
+
+  @media screen and (min-width: 1024px) {
+    margin-block-start: -2rem;
+  }
+
+  :is(.productTittle, .heroTittle, .description, .subtitle, .heroCta-container) {
+    opacity: 0;
+    transform: translateY(4rem);
+    animation: fadeIn-hero 1.5s ease-out 0.5s forwards;
+  }
+
+  .container {
+    position: relative;
+    margin-block-start: -5.5rem;
+    color: var(--colorTextAlt);
+    font-size: var(--sizeBodyBigger);
+    font-family: var(--fontDisplay);
+    font-weight: var(--fontWeightMedium);
+    letter-spacing: 0.009em;
+    line-height: 1.25;
+
+    @media screen and (min-width: 734px) {
+      margin-block-start: -7.5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-block-start: -9.5rem;
+    }
+  }
+
+  .productTittle {
+    margin-block-end: 0.5rem;
+    color: var(--colorText);
+    font-size: var(--sizeBodyBigger);
+    animation-delay: 0.5s;
+
+    @media screen and (min-width: 734px) {
+      margin-block-end: 1rem;
+    }
+  }
+
+  .heroTittle {
+    padding-block-end: 1.25rem;
+    background-image: radial-gradient(#eff1ff, #000 68%);
+    background-position: 50% 75%;
+    background-size: 150% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    font-weight: var(--fontWeightBold);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    animation-delay: 0.7s;
+
+    @media screen and (min-width: 734px) {
+      font-size: 5rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 6rem;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .description {
+    margin-block-end: 2.5rem;
+    animation-delay: 0.9s;
+
+    @media screen and (min-width: 1024px) {
+      max-inline-size: 56rem;
+      margin-inline: auto;
+    }
+  }
+
+  :is(.subtitle, .heroCta-container) {
+    font-size: 1.25rem;
+    animation-delay: 1.1s;
+  }
+
+  .subtitle {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 2rem;
+
+    .chip {
+      --size: 4rem;
+      inline-size: var(--size);
+      block-size: var(--size);
+    }
+
+    @media screen and (min-width: 734px) {
+      --size: 6rem;
+    }
+  }
+
+  .heroCta-container {
+    display: flex;
+    flex-direction: column;
+    animation-delay: 1.3s;
+  }
+
+  .heroCta {
+    color: var(--colorText);
+    font-weight: var(--fontWeightNormal);
+    padding-block: 0.5rem;
+
+    @media screen and (min-width: 734px) {
+      padding: 0;
+    }
+
+    &:first-child {
+      text-decoration: none;
+      cursor: auto;
+    }
+
+    &:first-of-type::after {
+      @media screen and (min-width: 734px) {
+        content: '|';
+        padding-inline: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 734px) {
+  .heroBanner :is(.subtitle, .heroCta-container) {
+    flex-direction: row;
+    font-size: var(--sizeBodyBig);
+  }
+}

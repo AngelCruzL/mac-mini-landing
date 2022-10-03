@@ -5,13 +5,16 @@
 }
 
 :root {
+  --maxWidthLarge: 91%;
+  --maxWidthMedium: 83%;
+  --maxWidthSmall: 75%;
+  --bgBody: #000;
+  --bgColor: #151516;
+  --bgColorAlt: rgba(29, 29, 31, 0.99);
   --colorText: #fff;
   --colorTextAlt: #a1a1a6;
   --colorAccent: #0071e3;
   --colorAccentAlt: #2997ff;
-  --bgBody: #000;
-  --bgColor: #151516;
-  --bgColorAlt: #1d1d1f;
 
   --headerHeight: 3rem;
   --z-negative: -1;
@@ -20,8 +23,12 @@
   --time: 0.15s;
 }
 
+html {
+  scroll-padding-block-start: var(--headerHeight);
+  scroll-behavior: smooth;
+}
+
 body {
-  overflow: hidden;
   background-color: var(--bgBody);
   color: var(--colorText);
   font-family: var(--fontBody);
@@ -40,9 +47,21 @@ a {
   &:hover {
     text-decoration: underline;
   }
+
+  &.arrow {
+    display: inline-block;
+
+    &::after {
+      content: '\e900';
+      display: inline;
+      padding-inline-start: 0.25rem;
+      font-family: 'icomoon' !important;
+      font-size: 0.65rem;
+    }
+  }
 }
 
-.black-background {
+.bgBlack {
   background-color: var(--bgColor);
 
   &-alt {
