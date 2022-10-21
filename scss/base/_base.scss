@@ -4,25 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --maxWidthLarge: 91%;
-  --maxWidthMedium: 83%;
-  --maxWidthSmall: 75%;
-  --bgBody: #000;
-  --bgColor: #151516;
-  --bgColorAlt: rgba(29, 29, 31, 0.99);
-  --colorText: #fff;
-  --colorTextAlt: #a1a1a6;
-  --colorAccent: #0071e3;
-  --colorAccentAlt: #2997ff;
-
-  --headerHeight: 3rem;
-  --z-negative: -1;
-  --z-normal: 1;
-  --z-sticky: 50;
-  --time: 0.15s;
-}
-
 html {
   scroll-padding-block-start: var(--headerHeight);
   scroll-behavior: smooth;
