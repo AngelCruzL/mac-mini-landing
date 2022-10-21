@@ -120,7 +120,7 @@
         </div>
       </section>
 
-      <section class="chipSection">
+      <section id="why-mac" class="chipSection">
         <div class="container">
           <picture>
             <source
@@ -159,9 +159,69 @@
         </div>
       </section>
 
-      <section id="specifications" class="sectionPlaceholder">
-        <h2>Especificaciones</h2>
-      </section>
+      <div id="specifications" class="grid-section">
+        <section class="featurePanel cpu">
+          <div class="content">
+            <h2 class="title">CPU</h2>
+            <h3 class="subtitle">
+              <span class="accent">8-core CPU</span><br />
+              Max power, mini footprint.
+            </h3>
+            <p class="description">
+              M1 packs astonishing speed and power into Mac mini. The 8-core CPU
+              delivers up to 3x faster processing performance than the previous
+              generation2 — all while keeping its iconic 7.7-inch-square design.
+            </p>
+            <button class="button ghost">
+              See how M1 revs<br class="break-line" />
+              redefines speed
+            </button>
+          </div>
+          <img src="/media/img/cpu.png" alt="Imagen de CPU" class="image" />
+        </section>
+
+        <section class="featurePanel gpu">
+          <div class="content"></div>
+          <h2 class="title">GPU</h2>
+
+          <div class="grid">
+            <div>
+              <h3 class="subtitle">
+                Incredible chip in. Unbelievable graphics out.
+              </h3>
+              <p class="content description">
+                The 8-core GPU brings astoundingly fast integrated graphics,
+                with a gigantic 6x increase in performance.9 That's an insane
+                amount of power — all in an incredibly compact enclosure.
+              </p>
+            </div>
+
+            <ul class="characteristicContainer">
+              <li class="characteristic">
+                <span class="number">8</span>
+                <span class="caption big">core</span>
+                GPU
+              </li>
+              <li class="characteristic">
+                Up to
+                <span class="number">6<span class="x">x</span></span>
+                <span class="caption">faster graphics<br />performance</span>
+              </li>
+            </ul>
+
+            <div>
+              <button class="button ghost">
+                See how M1 revs<br class="break-line" />
+                up graphics
+              </button>
+            </div>
+          </div>
+
+          <video class="video" autoplay muted loop>
+            <source src="/media/video/gpu-demostration.mp4" type="video/mp4" />
+          </video>
+        </section>
+      </div>
     </main>
   </body>
 </html>

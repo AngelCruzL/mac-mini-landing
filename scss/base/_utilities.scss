@@ -27,3 +27,18 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+.grid-section {
+  display: grid;
+  gap: 1.5rem;
+  margin-inline: auto;
+  inline-size: 100%;
+  max-inline-size: 25rem;
+
+  @media screen and (min-width: 360px) {
+    inline-size: calc(100% - 3rem);
+  }
+  @media screen and (min-width: 734px) {
+    max-inline-size: 87.5rem;
+  }
+}

@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (min-width: 734px) {
+@media screen and (min-width: 834px) {
   .mainHeader {
     border-bottom: var(--borderHeader);
 
@@ -65,7 +65,7 @@
 
 /* ----------- Mobile Styles ----------*/
 
-@media screen and (max-width: 734px) {
+@media screen and (max-width: 834px) {
   .mainHeader {
     --menuTransition: 0.5s;
 

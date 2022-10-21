@@ -1,0 +1,191 @@
+.featurePanel {
+  --padding: 2rem;
+  --max-width: 25rem;
+  position: relative;
+  overflow: hidden;
+  padding: var(--padding);
+
+  @media screen and (min-width: 360px) {
+    border-radius: 1.25rem;
+  }
+  @media screen and (min-width: 734px) {
+    --padding: 2.5rem;
+  }
+  @media screen and (min-width: 1024px) {
+    --max-width: 31.25rem;
+  }
+
+  .title {
+    margin-block-end: 1.5rem;
+    font-size: var(--sizeBodyNormal);
+
+    @media screen and (min-width: 734px) {
+      margin-block-end: var(--bigger-tittle-size);
+    }
+    @media screen and (min-width: 1024px) {
+      margin-block-end: 5.5rem;
+    }
+  }
+
+  .subtitle {
+    margin-block-end: 1.25rem;
+    max-inline-size: 500px;
+    font-size: 2rem;
+    font-weight: var(--fontWeightBold);
+
+    @media screen and (min-width: 734px) {
+      margin-block-end: 1.5rem;
+      font-size: 4rem;
+    }
+  }
+
+  .description {
+    margin-block-end: 2rem;
+    font-family: var(--fontDisplay);
+    font-weight: var(--fontWeightSemiBold);
+    font-size: 1.25rem;
+    line-height: 1.4em;
+    letter-spacing: 0.012em;
+
+    @media screen and (min-width: 734px) {
+      margin-block-end: 3.5rem;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-block-end: 4.5rem;
+    }
+  }
+
+  .button {
+    padding-block: 0.75rem;
+    padding-inline: 1.25rem;
+
+    @media screen and (min-width: 734px) {
+      white-space: nowrap;
+    }
+  }
+
+  .image {
+    --width: 90%;
+    display: block;
+    margin-inline-start: auto;
+    inline-size: var(--width);
+
+    @media screen and (min-width: 734px) {
+      --width: 32rem;
+      --spacing: 4rem;
+      position: absolute;
+      bottom: -2rem;
+      left: calc(var(--width) + var(--spacing));
+    }
+    @media screen and (min-width: 1024px) {
+      --width: 45rem;
+      --spacing: -4rem;
+    }
+  }
+
+  .characteristicContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-block-end: 4rem;
+    font-size: 1.25rem;
+    text-align: center;
+    list-style: none;
+
+    @media screen and (min-width: 734px) {
+      align-content: space-between;
+    }
+    @media screen and (min-width: 1024px) {
+      align-items: center;
+      align-content: center;
+    }
+  }
+
+  .characteristic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number {
+    --size: 5rem;
+    font-family: var(--fontDisplay);
+    font-size: var(--size);
+    font-weight: var(--fontWeightBold);
+    line-height: 1;
+
+    @media screen and (min-width: 734px) {
+      --size: 6rem;
+    }
+
+    .x {
+      font-size: calc(var(--size) - 2rem);
+    }
+  }
+
+  .caption {
+    font-weight: var(--fontWeightBold);
+  }
+}
+
+@media screen and (min-width: 734px) {
+  .featurePanel .content {
+    box-sizing: content-box;
+    padding-inline-end: 0;
+    max-inline-size: var(--max-width);
+  }
+
+  .featurePanel .break-line {
+    display: none;
+  }
+
+  .featurePanel .caption.big {
+    font-family: var(--fontDisplay);
+    font-size: 4rem;
+    font-weight: var(--fontWeightBold);
+  }
+}
+
+.featurePanel.cpu {
+  background-image: linear-gradient(-135deg, #c6368a 0%, #673dc2 100%);
+}
+
+.featurePanel.cpu .subtitle .accent {
+  color: #c48cfc;
+}
+
+.featurePanel.gpu .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  block-size: 100%;
+  inline-size: 100%;
+  object-fit: cover;
+  z-index: var(--z-negative);
+}
+
+@media screen and (min-width: 734px) {
+  .featurePanel.gpu .grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+  }
+
+  .featurePanel.gpu .content {
+    max-width: initial;
+  }
+
+  .featurePanel.gpu .characteristicContainer {
+    padding-block-start: 3rem;
+    gap: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .featurePanel.gpu .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featurePanel.gpu .subtitle {
+    font-size: 5rem;
+  }
+}

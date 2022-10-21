@@ -17,4 +17,10 @@
     padding-inline: 0.5rem;
     font-size: var(--sizeBodySmaller);
   }
+
+  &.ghost {
+    border: 2px solid white;
+    background: none;
+    font-weight: var(--fontWeightSemiBold);
+  }
 }
